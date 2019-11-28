@@ -5,7 +5,7 @@
     android:orientation="vertical" >
 
     <TextView
-        android:id="@+android:id/title"
+        android:id="@android:id/title"
         style="@android:style/TextAppearance.DeviceDefault.SearchResult.Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -13,7 +13,7 @@
         android:visibility="gone"/>
 
     <TextView
-        android:id="@+android:id/summary"
+        android:id="@android:id/summary"
         style="@android:style/TextAppearance.DeviceDefault.SearchResult.Subtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -94,13 +94,13 @@
 
     </LinearLayout>
 
-    <LinearLayout android:id="@+android:id/widget_frame"
+    <LinearLayout android:id="@android:id/widget_frame"
         android:layout_width="wrap_content"
         android:layout_height="fill_parent"
         android:gravity="center_vertical"
         android:orientation="vertical" />
 
-    <ImageView android:id="@+android:id/icon"
+    <ImageView android:id="@android:id/icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 

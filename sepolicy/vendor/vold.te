@@ -1,0 +1,3 @@
+# Allow vold to access a block_device for full disk encryption
+allow vold block_device:blk_file { read write open };
+

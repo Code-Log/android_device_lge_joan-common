@@ -9,7 +9,7 @@
 /dev/block/bootdevice/by-name/boot          /boot             emmc    defaults                                                                  defaults
 /dev/block/bootdevice/by-name/system        /system           ext4    ro,barrier=1,discard                                                      wait,recoveryonly
 /dev/block/bootdevice/by-name/cache         /cache            ext4    discard,nosuid,nodev,barrier=1,noatime,noauto_da_alloc,errors=continue    wait,check,formattable
-/dev/block/bootdevice/by-name/userdata      /data             ext4    discard,nosuid,nodev,barrier=1,noatime,noauto_da_alloc,errors=continue    wait,check,formattable,encryptable=/dev/block/bootdevice/by-name/encrypt,quota
+/dev/block/bootdevice/by-name/userdata      /data             ext4    discard,nosuid,nodev,barrier=1,noatime,noauto_da_alloc,errors=continue    wait,check,formattable,encryptable=/dev/block/bootdevice/by-name/encrypt,quota,reservedsize=40
 /dev/block/bootdevice/by-name/misc          /misc             emmc    defaults                                                                  defaults
 /dev/block/bootdevice/by-name/ftm           /ftm              emmc    defaults                                                                  defaults
 
@@ -24,7 +24,7 @@
 /dev/block/bootdevice/by-name/qni           /qni              ext4    nosuid,nodev,barrier=1,noatime,noauto_da_alloc,errors=continue            wait,notrim
 
 # external SD
-/devices/soc/c0a4900.sdhci/mmc_host*        auto              auto    nosuid,nodev                                                              wait,encryptable=/dev/block/bootdevice/by-name/encrypt,voldmanaged=external_SD:auto
+/devices/soc/c0a4900.sdhci/mmc_host*        auto              auto    nosuid,nodev                                                              wait,encryptable=footer,voldmanaged=external_SD:auto
 
 # OTG
 /devices/soc/a800000.ssusb/a800000.dwc3/xhci-hcd.0.auto/usb*    auto    auto    defaults                                                   voldmanaged=usb:auto
